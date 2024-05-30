@@ -3,15 +3,15 @@
 source segm_models/bin/activate
 
 CPU_TRAIN=false
-BATCH=8
-EPOH=100
+BATCH=40
+EPOH=10
 ENCODER="efficientnet-b0"
-AUGM="hard"
-DSET_NAME="deepglobe"
+AUGM="medium"
+DSET_NAME="OnCloudN"
 MODEL="deeplabv3+"
 # на какой целевой класс сейчас обучаем
-CLASS="water"
-CLASS_LIST="64"
+CLASS="Clouds"
+CLASS_LIST="210"
 IMAGE_SIZE="512"
 # лог обучения сохранится в файл ./logs/$ENCODER"_batch_"$BATCH"_%j" где j - номер задачи на кластере
 # имя эксперимента задается ниже в этом файле exp-name=$ENCODER'_bsize_'$BATCH'_'$AUGM
